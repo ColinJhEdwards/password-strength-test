@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(261, 88%, 17%);
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.strength-meter {
+  height: 2rem;
+  width: 90%;
+  border: 3px solid hsl(0, 0%, 64%);
+  border-radius: 15px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.strength-meter::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: calc(1% * var(--strength, 0));
+  background: hsl(0, 0%, 93%);
+  transition: width 200ms;
+}
