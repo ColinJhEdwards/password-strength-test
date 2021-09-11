@@ -28,3 +28,20 @@ body {
   background: hsl(0, 0%, 93%);
   transition: width 200ms;
 }
+
+.password-input {
+  width: 50%;
+  padding: 1rem 1.5rem;
+  background: rgb(53, 53, 53);
+  color: white;
+  border: none;
+  margin-top: 1rem;
+  outline: none;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.reasons > * {
+  margin-top: 0.5rem;
+  color: rgb(156, 156, 156);
+}
