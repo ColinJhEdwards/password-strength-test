@@ -9,7 +9,9 @@
   </head>
   <body>
     <h1>Password Strength Test</h1>
-    <div class="strength-meter"></div>
+    <div class="strength-meter" id="strength-meter"></div>
+    <!-- aria-labelledby on the input is for screen readers so that when seleceted -->
+    <!-- users will know they clicked on the password input -->
     <input
       value="password"
       type="text"
@@ -19,5 +21,7 @@
       id="password-input"
     />
     <div id="reasons" class="reasons"></div>
+    <!-- defer makes it so the app.js loads after all the html -->
+    <script src="app.js" defer></script>
   </body>
 </html>
