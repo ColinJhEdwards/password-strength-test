@@ -47,3 +47,24 @@ function lengthWeakness(password) {
     };
   }
 }
+
+//testing lowercase weakness with regex
+function lowerCaseWeakness(password) {
+  //check password for lowercase letters, this regex will search for all characters between a-z
+  //g property makes it a global search so it will check the entire string and not just
+  // the first lowercase found
+  const matches = password.match(/[a-z]/g) || [];
+  if (matches.length === 0) {
+    return {
+      message: "Your password has no lowercase characters",
+      deduction: 20,
+    };
+  }
+
+  if (matches.length <= 2) {
+    return {
+      message: "Your password could have more lowercase characters",
+      deduction: 5,
+    };
+  }
+}
